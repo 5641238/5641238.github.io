@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadrado</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="text-center">Cuadrado</h1>
+            <p>El cuadrado es una figura geométrica plana que se ubica dentro del grupo de los cuadriláteros, que tiene cuatro lados de igual longitud, cuatro vértices y cuatro ángulos internos iguales con una amplitud de 90° cada uno.
+                Igualmente, el cuadro está dentro de la clasificación de los cuadriláteros, que a su vez es del tipo paralelogramo, por tener lados paralelos dos a dos.</p>
+            <img src="/img/cuadrado.png" class="center-block" width="350" height="350" alt="" srcset="">
+            <a href="../pages/figuras.html" class="btn btn-lg btn-info">Atras</a>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Lado</span>
+            <input id="lado" type="text" class="form-control" placeholder="Escribe un lado ejemplo: 10" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <button onclick="calcular()" type="button" class="btn btn-lg btn-success btn-block">Calcular</button>
+          <h2 id="area">Area:</h2>
+          <h2 id="perimetro">Perimetro:</h2>
+    </div>
+    <script >
+        function calcular() {
+            var lado = parseFloat(document.getElementById("lado").value);
+            var h2area = document.getElementById("area");
+            var h2perimetro = document.getElementById("perimetro");
+            var perimetro = lado*4;
+            var area = lado*lado;
+            h2area.innerText = "Area: "+area;
+            h2perimetro.innerText = "Perimetro: "+perimetro;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangulo</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="text-center">Rectangulo</h1>
+            <p>El rectángulo es una figura geométrica plana que se clasifica dentro de los paralelogramos, por tener sus lados opuestos paralelos dos a dos y de igual longitud y además sus cuatro ángulos internos con medida de 90° cada uno.</p>
+            <img src="/img/rectangulo.jpg" class="center-block" width="650" height="350" alt="" srcset="">
+            <a href="../pages/figuras.html" class="btn btn-lg btn-info">Atras</a>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Base</span>
+            <input id="base" type="text" class="form-control" placeholder="Escribe una base ejemplo: 50" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Altura</span>
+            <input id="altura" type="text" class="form-control" placeholder="Escribe una altura ejemplo: 10" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <button onclick="calcular()" type="button" class="btn btn-lg btn-success btn-block">Calcular</button>
+          <h2 id="area">Area:</h2>
+          <h2 id="perimetro">Perimetro:</h2>
+    </div>
+    <script >
+        function calcular() {
+            var base = parseFloat(document.getElementById("base").value);
+            var altura = parseFloat(document.getElementById("altura").value);
+            var h2area = document.getElementById("area");
+            var h2perimetro = document.getElementById("perimetro");
+            var perimetro = 2*(base+altura);
+            var area = base*altura;
+            h2area.innerText = "Area: "+area;
+            h2perimetro.innerText = "Perimetro: "+perimetro;
+        }
+    </script>
+</body>
+</html>

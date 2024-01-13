@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="text-center">Triangulo</h1>
+            <p>Los triángulos o trígonos son figuras geométricas planas, básicas, que poseen tres lados en contacto entre síen puntos comunes denominados vértices. Su nombre proviene del hecho de que posee tres ángulos interiores o internos, formados por cada par de líneas en contacto en un mismo vértice</p>
+            <img src="/img/triangulo.png" class="center-block" width="350" height="350" alt="" srcset="">
+            <a href="../pages/figuras.html" class="btn btn-lg btn-info">Atras</a>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Lado 1</span>
+            <input id="lado1" type="text" class="form-control" placeholder="Escribe el lado 1 ejemplo: 10" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Lado 2</span>
+            <input id="lado2" type="text" class="form-control" placeholder="Escribe el lado 2 ejemplo: 10" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Lado 3</span>
+            <input id="lado3" type="text" class="form-control" placeholder="Escribe el lado 3 ejemplo: 10" aria-describedby="sizing-addon1">
+          </div>
+          <button onclick="calcular()" type="button" class="btn btn-lg btn-success btn-block">Calcular</button>
+          <h2 id="area">Area:</h2>
+          <h2 id="perimetro">Perimetro:</h2>
+    </div>
+    <script >
+        function calcular() {
+            var lado1 = parseFloat(document.getElementById("lado1").value);
+            var lado2 = parseFloat(document.getElementById("lado2").value);
+            var lado3 = parseFloat(document.getElementById("lado3").value);
+            var h2area = document.getElementById("area");
+            var h2perimetro = document.getElementById("perimetro");
+            var perimetro = lado1+lado2+lado3;
+            var s = (lado1+lado2+lado3)/2;
+            var area = Math.sqrt(s*(s-lado1)*(s-lado2)*(s-lado3));
+            h2area.innerText = "Area: "+area;
+            h2perimetro.innerText = "Perimetro: "+perimetro;
+        }
+    </script>
+</body>
+</html>

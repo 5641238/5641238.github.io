@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trapecio</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="text-center">Trapecio</h1>
+            <p>Un trapecio es necesariamente un cuadrilátero convexo en geometría euclídea. Los lados paralelos se llaman bases del trapecio. Los otros dos lados se llaman catetos (o lados laterales ) si no son paralelos; en caso contrario, el trapezoide es un paralelogramo, y hay dos pares de bases.</p>
+            <img src="/img/trapecio.png" class="center-block" width="550" height="350" alt="" srcset="">
+            <a href="../pages/figuras.html" class="btn btn-lg btn-info">Atras</a>
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Base Mayor</span>
+            <input id="basemayor" type="text" class="form-control" placeholder="Escribe la base mayor: 10" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Base menor</span>
+            <input id="basemenor" type="text" class="form-control" placeholder="Escribe la base menor : 5" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Altura</span>
+            <input id="altura" type="text" class="form-control" placeholder="Escribe la altura: 20" aria-describedby="sizing-addon1">
+          </div>
+          <br>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="sizing-addon1">Lado</span>
+            <input id="lado" type="text" class="form-control" placeholder="Escribe el lado: 10" aria-describedby="sizing-addon1">
+          </div>
+          <button onclick="calcular()" type="button" class="btn btn-lg btn-success btn-block">Calcular</button>
+          <h2 id="area">Area:</h2>
+          <h2 id="perimetro">Perimetro:</h2>
+    </div>
+    <script >
+        function calcular() {
+            var basemayor = parseFloat(document.getElementById("basemayor").value);
+            var basemenor = parseFloat(document.getElementById("basemenor").value);
+            var altura = parseFloat(document.getElementById("altura").value);
+            var lado = parseFloat(document.getElementById("lado").value);
+            var h2area = document.getElementById("area");
+            var h2perimetro = document.getElementById("perimetro");
+            var perimetro = basemayor+basemenor+lado+lado;
+            var area = ((basemayor+basemenor)/2)*altura;
+            h2area.innerText = "Area: "+area;
+            h2perimetro.innerText = "Perimetro: "+perimetro;
+        }
+    </script>
+</body>
+</html>
